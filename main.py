@@ -7,7 +7,6 @@ import os
 
 init(autoreset=True)
 
-# clear console depending on OS platform
 clear = lambda: os.system('cls' if os.name == 'nt' else 'clear')
 clear()
 
@@ -97,7 +96,7 @@ if gen_type.lower() == 'custom':
                      Fore.LIGHTRED_EX)
   print(Fore.LIGHTRED_EX + "\n\nStatus: " + Fore.WHITE +
         "Generating custom usernames...")
-  while True:  # Infinite loop
+  while True: 
     username = generate_custom_username(base_words, int(username_length),
                                         use_numbers, use_underscore)
     response = requests.get(
@@ -106,7 +105,7 @@ if gen_type.lower() == 'custom':
     data = response.json()
     if 'code' in data and data['code'] in [0, 5]:
       print(Fore.WHITE + username)
-    sleep(1)  # delay to not overwhelm the API
+    sleep(0.5)  
 else:
   print(Fore.LIGHTRED_EX + "\n\nStatus: " + Fore.WHITE +
         "Generating random usernames...")
@@ -119,4 +118,4 @@ else:
     data = response.json()
     if 'code' in data and data['code'] in [0, 5]:
       print(Fore.WHITE + username)
-    sleep(0.5)  # delay to not overwhelm the API
+    sleep(0.5) 
