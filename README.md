@@ -10,4 +10,5 @@ RobloxUsernameGenerator is a free product developed by Bigriderr that will allow
 > Allows to choose or not to have numbers in the username
 > Allows to choose or not to have underscores in the username
 
+Excute this command in a cmd before runnig!:  "pip install requests colorama"
 **Will get more updates in the future :)**
